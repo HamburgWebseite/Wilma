@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Annette Hamburg – rechtssicher kommunizieren</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600;700&family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal:#1a444e;
+    --teal-dark:#153841;
+    --teal-light:#1e515b;
+    --cream:#eae7db;        /* body cream */
+    --cream-light:#e9e6c4;  /* accent cream (stärker gelblich) */
+    --bubble:#e9e5c3;       /* sprechblasen gelblich */
+    --text-dark:#2a2a2a;
+    --text-teal:#1a444e;
+    --white:#ffffff;
+    --line:rgba(0,0,0,.15);
+    --line-light:rgba(255,255,255,.25);
+  }
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+font-family:‘Montserrat’,sans-serif;
+font-weight:400;
+font-size:16px;
+line-height:1.55;
+color:var(–text-dark);
+background:var(–white);
+-webkit-font-smoothing:antialiased;
+}
+
+.container{
+max-width:1100px;
+margin:0 auto;
+padding:0 40px;
+}
+
+/* ===================== HERO ===================== */
+.hero{
+position:relative;
+width:100%;
+height:420px;
+background-image:url(‘assets/hero.jpg’);
+background-size:cover;
+background-position:center;
+}
+
+/* ===================== NAVIGATION ===================== */
+.nav-wrap{
+background:var(–white);
+padding:30px 0 20px;
+}
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:flex-start;
+gap:30px;
+padding:0 40px;
+max-width:1100px;
+margin:0 auto;
+}
+.nav-item{
+flex:1;
+padding-left:14px;
+border-left:2px solid var(–teal);
+text-transform:uppercase;
+font-size:14px;
+font-weight:600;
+letter-spacing:.03em;
+color:var(–teal);
+text-decoration:none;
+line-height:1.35;
+transition:opacity .2s;
+}
+.nav-item:hover{opacity:.7}
+
+/* ===================== SECTION TITLES ===================== */
+.section-title{
+font-family:‘Cormorant Garamond’,serif;
+font-weight:400;
+font-size:54px;
+letter-spacing:.08em;
+text-transform:uppercase;
+color:var(–text-teal);
+padding-bottom:14px;
+border-bottom:1px solid rgba(0,0,0,.35);
+margin-bottom:28px;
+}
+.section-title.on-dark{
+color:var(–cream);
+border-bottom-color:rgba(255,255,255,.35);
+}
+.subtitle-teal{
+font-size:20px;
+color:var(–text-teal);
+font-weight:500;
+margin-bottom:8px;
+}
+.subtitle-teal.on-dark{color:var(–cream)}
+.tagline-teal{
+font-size:18px;
+color:var(–text-teal);
+font-weight:500;
+margin-bottom:24px;
+}
+.tagline-teal.on-dark{color:var(–cream)}
+
+/* ===================== HOMEPAGE HERO TEXT ===================== */
+.home-hero{
+background:var(–white);
+padding:40px 0 60px;
+}
+.home-hero h1{
+font-family:‘Cormorant Garamond’,serif;
+font-weight:400;
+font-size:54px;
+letter-spacing:.05em;
+color:var(–text-dark);
+padding-bottom:18px;
+border-bottom:1px solid rgba(0,0,0,.35);
+margin-bottom:22px;
+}
+.home-hero .tagline{
+font-size:20px;
+color:var(–text-teal);
+font-weight:500;
+margin-bottom:38px;
+}
+.home-hero h2{
+font-size:18px;
+font-weight:700;
+text-transform:uppercase;
+color:var(–text-dark);
+letter-spacing:.02em;
+margin-bottom:10px;
+}
+.home-hero .sub{
+font-size:15px;
+color:var(–text-dark);
+margin-bottom:50px;
+}
+
+/* ===================== ICON CARDS ===================== */
+.icon-cards{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:28px;
+margin-top:40px;
+}
+.icon-card{
+background:var(–cream-light);
+border-radius:14px;
+padding:70px 26px 32px;
+position:relative;
+text-align:center;
+min-height:230px;
+}
+.icon-circle{
+position:absolute;
+top:-48px;
+left:50%;
+transform:translateX(-50%);
+width:110px;
+height:110px;
+background:var(–teal);
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 4px 18px rgba(0,0,0,.15);
+}
+.icon-circle svg{width:56px;height:56px;stroke:var(–cream);fill:none;stroke-width:2}
+.icon-card h3{
+font-size:17px;
+font-weight:700;
+color:var(–text-teal);
+margin-bottom:14px;
+margin-top:6px;
+}
+.icon-card p{
+font-size:14px;
+font-weight:600;
+color:var(–text-dark);
+line-height:1.45;
+}
+
+/* ===================== KURZ & ÜBERSICHTLICH (small list) ===================== */
+.kurz{
+margin-top:70px;
+max-width:500px;
+}
+.kurz h3{
+font-size:16px;
+font-weight:700;
+text-transform:uppercase;
+color:var(–text-dark);
+letter-spacing:.02em;
+margin-bottom:14px;
+}
+.kurz ul{list-style:none}
+.kurz li{
+padding:12px 0;
+font-size:14px;
+font-weight:600;
+color:var(–text-dark);
+border-bottom:1px solid var(–line);
+position:relative;
+padding-left:18px;
+}
+.kurz li::before{
+content:”•”;
+position:absolute;
+left:2px;
+color:var(–text-dark);
+}
+
+/* ===================== ÜBER MICH (cream section) ===================== */
+.ueber-mich{
+background:var(–cream);
+padding:80px 0 90px;
+}
+.ueber-mich-wrap{
+display:grid;
+grid-template-columns:1.3fr 1fr;
+gap:50px;
+align-items:start;
+}
+.ueber-mich-text h3{
+font-size:15px;
+font-weight:700;
+text-transform:uppercase;
+color:var(–text-dark);
+letter-spacing:.02em;
+margin:28px 0 12px;
+}
+.ueber-mich-text h3:first-of-type{margin-top:0}
+.ueber-mich-text p{
+font-size:15px;
+line-height:1.6;
+color:var(–text-dark);
+margin-bottom:14px;
+}
+.ueber-mich-img{
+width:100%;
+aspect-ratio:3/3.2;
+background-image:url(‘assets/beraterin.jpg’);
+background-size:cover;
+background-position:center;
+border-radius:4px;
+}
+
+/* ===================== KOMPAKTSEMINAR (dark teal) ===================== */
+.kompakt{
+background:linear-gradient(180deg,#1a444e 0%,#153841 100%);
+color:var(–cream);
+padding:80px 0 90px;
+position:relative;
+overflow:hidden;
+}
+.kompakt .section-title{color:var(–cream);border-bottom-color:rgba(255,255,255,.35)}
+.kompakt-intro{
+font-size:15px;
+line-height:1.65;
+margin-bottom:40px;
+color:var(–cream);
+}
+.kompakt h3.label{
+font-size:15px;
+font-weight:700;
+text-transform:uppercase;
+letter-spacing:.02em;
+color:var(–cream);
+margin-bottom:18px;
+}
+
+/* Speech bubbles */
+.bubbles-wrap{
+position:relative;
+height:280px;
+margin:20px 0 30px;
+}
+.bubble{
+position:absolute;
+background:var(–bubble);
+color:#4a4730;
+border-radius:20px;
+padding:20px 26px;
+font-family:‘Cormorant Garamond’,serif;
+font-style:italic;
+font-weight:500;
+font-size:22px;
+line-height:1.25;
+box-shadow:0 2px 10px rgba(0,0,0,.2);
+}
+.bubble::after{
+content:””;
+position:absolute;
+bottom:-14px;
+width:22px;
+height:22px;
+background:var(–bubble);
+}
+.bubble.b1{top:20px;left:40px;}
+.bubble.b1::after{left:40px;clip-path:polygon(0 0,100% 0,0 100%)}
+.bubble.b2{top:90px;left:330px;}
+.bubble.b2::after{left:30px;clip-path:polygon(0 0,100% 0,20% 100%)}
+.bubble.b3{top:10px;left:570px;}
+.bubble.b3::after{left:30px;clip-path:polygon(0 0,100% 0,30% 100%)}
+.bubble.b4{top:110px;left:820px;}
+.bubble.b4::after{left:40px;clip-path:polygon(0 0,100% 0,10% 100%)}
+
+.bubbles-caption{
+font-size:14px;
+color:var(–cream);
+max-width:700px;
+line-height:1.55;
+margin-top:10px;
+}
+
+/* Practice box */
+.practice-box{
+background:rgba(255,255,255,.06);
+border:1px solid rgba(255,255,255,.15);
+border-radius:14px;
+padding:32px 36px;
+margin:40px 0 50px;
+}
+.practice-box h4{
+font-size:16px;
+font-weight:700;
+color:var(–cream);
+margin-bottom:16px;
+}
+.practice-box ul{list-style:none;padding-left:4px}
+.practice-box li{
+position:relative;
+padding-left:20px;
+margin-bottom:14px;
+font-size:14px;
+line-height:1.55;
+color:var(–cream);
+}
+.practice-box li::before{
+content:”•”;
+position:absolute;
+left:0;
+color:var(–cream);
+}
+
+/* Two column cards dark */
+.two-col{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:28px;
+margin-bottom:40px;
+}
+.dark-card{
+background:rgba(255,255,255,.06);
+border:1px solid rgba(255,255,255,.15);
+border-radius:14px;
+padding:30px 32px;
+}
+.dark-card h4{
+font-size:15px;
+font-weight:700;
+color:var(–cream);
+margin-bottom:18px;
+text-transform:uppercase;
+letter-spacing:.02em;
+}
+.dark-card h5{
+font-size:13px;
+font-weight:700;
+color:var(–cream);
+margin:14px 0 6px;
+}
+.dark-card h5:first-of-type{margin-top:0}
+.dark-card p,
+.dark-card li{
+font-size:14px;
+line-height:1.55;
+color:var(–cream);
+}
+.dark-card ul{list-style:none;padding:0}
+.dark-card .schwerpunkt{
+border-top:1px solid rgba(255,255,255,.2);
+padding-top:14px;
+margin-top:14px;
+}
+.dark-card .schwerpunkt:first-child{border-top:none;padding-top:0;margin-top:0}
+
+.kurz-dark{
+margin-top:18px;
+}
+.kurz-dark .row{
+display:grid;
+grid-template-columns:120px 1fr;
+padding:10px 0;
+border-bottom:1px solid rgba(255,255,255,.2);
+font-size:14px;
+color:var(–cream);
+}
+.kurz-dark .row:last-child{border-bottom:none}
+
+/* Für wen */
+.fuer-wen{
+margin-top:10px;
+}
+.fuer-wen p{
+font-size:14px;
+font-weight:600;
+color:var(–cream);
+margin-bottom:10px;
+line-height:1.55;
+}
+
+/* Large A+ watermark */
+.watermark-a{
+position:absolute;
+font-family:‘Dancing Script’,cursive;
+font-size:620px;
+color:rgba(234,231,195,.08);
+top:50%;
+right:-80px;
+transform:translateY(-50%);
+line-height:1;
+pointer-events:none;
+z-index:0;
+}
+.kompakt .container{position:relative;z-index:1}
+
+/* ===================== HONORAR ===================== */
+.honorar{
+background:var(–cream);
+padding:80px 0 90px;
+}
+.honorar .section-title{color:var(–text-teal)}
+.honorar .intro{
+font-size:15px;
+color:var(–text-dark);
+margin-bottom:24px;
+}
+.honorar .preis{
+font-size:20px;
+font-weight:700;
+color:var(–text-teal);
+margin:20px 0 40px;
+}
+.honorar h3.big-label{
+font-size:16px;
+font-weight:700;
+text-transform:uppercase;
+color:var(–text-dark);
+letter-spacing:.02em;
+margin-bottom:16px;
+}
+.honorar-list{list-style:none;padding:0}
+.honorar-list > li{
+padding:14px 0;
+border-bottom:1px solid var(–line);
+font-size:14px;
+line-height:1.55;
+color:var(–text-dark);
+position:relative;
+padding-left:22px;
+}
+.honorar-list > li::before{
+content:”•”;
+position:absolute;
+left:4px;
+color:var(–text-dark);
+}
+.honorar-list > li strong{font-weight:700}
+.honorar-list ul{
+list-style:none;
+margin-top:8px;
+padding-left:4px;
+}
+.honorar-list ul li{
+font-size:13px;
+padding:3px 0;
+position:relative;
+padding-left:14px;
+}
+.honorar-list ul li::before{
+content:”•”;
+position:absolute;
+left:0;
+}
+
+/* Three small info cards */
+.info-cards{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:22px;
+margin:40px 0;
+}
+.info-card{
+background:rgba(26,68,78,.06);
+border:1px solid rgba(26,68,78,.2);
+border-radius:14px;
+padding:24px 26px;
+}
+.info-card h4{
+font-size:15px;
+font-weight:700;
+color:var(–text-teal);
+margin-bottom:14px;
+}
+.info-card ul{list-style:none;padding:0}
+.info-card li{
+font-size:13px;
+font-weight:600;
+color:var(–text-dark);
+margin-bottom:10px;
+position:relative;
+padding-left:14px;
+line-height:1.5;
+}
+.info-card li::before{
+content:”•”;
+position:absolute;
+left:0;
+color:var(–text-dark);
+}
+
+/* Auf wunsch */
+.auf-wunsch h3{
+font-size:15px;
+font-weight:700;
+color:var(–text-teal);
+margin:20px 0 14px;
+}
+.auf-wunsch ul{list-style:none;padding:0;margin-bottom:40px}
+.auf-wunsch li{
+padding:12px 0;
+font-size:14px;
+color:var(–text-dark);
+border-bottom:1px solid var(–line);
+position:relative;
+padding-left:22px;
+}
+.auf-wunsch li::before{
+content:”•”;
+position:absolute;
+left:4px;
+}
+
+/* Wichtiger Hinweis Box */
+.hinweis-box{
+background:linear-gradient(180deg,#1a444e 0%,#153841 100%);
+color:var(–cream);
+border-radius:14px;
+padding:34px 40px;
+margin:40px 0;
+position:relative;
+overflow:hidden;
+}
+.hinweis-box h4{
+font-size:14px;
+font-weight:700;
+text-transform:uppercase;
+color:var(–cream);
+letter-spacing:.02em;
+margin-bottom:16px;
+}
+.hinweis-box p{
+font-size:14px;
+line-height:1.6;
+color:var(–cream);
+margin-bottom:12px;
+}
+.hinweis-box::after{
+content:”!”;
+position:absolute;
+right:40px;
+top:20px;
+font-family:‘Cormorant Garamond’,serif;
+font-size:200px;
+font-weight:300;
+color:rgba(234,231,195,.22);
+line-height:1;
+}
+
+/* Nachhaltigkeit */
+.nachhaltigkeit{
+display:grid;
+grid-template-columns:1fr 1.2fr;
+gap:40px;
+margin-top:40px;
+position:relative;
+}
+.nachhaltigkeit h3{
+font-size:16px;
+font-weight:700;
+color:var(–text-dark);
+margin-bottom:14px;
+}
+.nachhaltigkeit .left p{
+font-size:14px;
+color:var(–text-dark);
+}
+.vertiefung-box{
+background:rgba(255,255,255,.3);
+border-radius:14px;
+padding:26px 30px;
+}
+.vertiefung-box h4{
+font-size:14px;
+font-weight:700;
+color:var(–text-dark);
+margin-bottom:16px;
+}
+.vertiefung-box h5{
+font-size:15px;
+font-weight:700;
+color:var(–text-teal);
+margin:14px 0 4px;
+}
+.vertiefung-box p{
+font-size:13px;
+color:var(–text-dark);
+line-height:1.5;
+margin-bottom:10px;
+}
+
+/* Watermark A+ big */
+.big-a-watermark{
+position:absolute;
+font-family:‘Dancing Script’,cursive;
+font-size:480px;
+color:rgba(26,68,78,.08);
+bottom:-100px;
+left:40px;
+pointer-events:none;
+line-height:1;
+}
+
+/* ===================== KONTAKT ===================== */
+.kontakt{
+background:var(–white);
+padding:80px 0;
+}
+.kontakt .section-title{color:var(–text-teal)}
+.kontakt h3{
+font-size:18px;
+font-weight:700;
+color:var(–text-teal);
+margin-bottom:14px;
+line-height:1.45;
+}
+.kontakt .intro-p{
+font-size:14px;
+color:var(–text-dark);
+margin-bottom:30px;
+}
+.kontakt .intro-p strong{font-weight:700}
+
+form .field{margin-bottom:18px}
+form label{
+display:block;
+font-size:13px;
+color:var(–text-dark);
+margin-bottom:6px;
+}
+form input,
+form textarea{
+width:100%;
+background:var(–cream);
+border:none;
+border-radius:12px;
+padding:16px 18px;
+font-family:inherit;
+font-size:14px;
+color:var(–text-dark);
+outline:none;
+}
+form input{height:50px}
+form textarea{min-height:130px;resize:vertical}
+form input:focus,
+form textarea:focus{box-shadow:0 0 0 2px rgba(26,68,78,.3)}
+
+.disclaimer{
+font-size:12px;
+color:#6a6a6a;
+margin:14px 0 20px;
+line-height:1.5;
+}
+.btn-send{
+background:linear-gradient(180deg,#1a444e 0%,#153841 100%);
+color:var(–cream);
+padding:16px 30px;
+border:none;
+border-radius:10px;
+font-family:inherit;
+font-size:15px;
+font-weight:700;
+cursor:pointer;
+transition:opacity .2s;
+}
+.btn-send:hover{opacity:.88}
+
+/* ===================== IMPRESSUM ===================== */
+.impressum{
+background:var(–cream);
+padding:70px 0;
+position:relative;
+overflow:hidden;
+}
+.impressum .container{position:relative;z-index:1}
+.impressum .section-title{color:var(–text-teal)}
+.impressum h3{
+font-size:14px;
+font-weight:700;
+color:var(–text-dark);
+margin:16px 0 6px;
+}
+.impressum h3:first-of-type{margin-top:0}
+.impressum p{
+font-size:14px;
+color:var(–text-dark);
+margin-bottom:6px;
+line-height:1.55;
+}
+.impressum .big-name{font-weight:700}
+.impressum-a-watermark{
+position:absolute;
+font-family:‘Dancing Script’,cursive;
+font-size:520px;
+color:rgba(26,68,78,.08);
+top:50%;
+right:-60px;
+transform:translateY(-50%);
+line-height:1;
+pointer-events:none;
+}
+
+/* ===================== DATENSCHUTZ ===================== */
+.datenschutz{
+background:var(–white);
+padding:70px 0 90px;
+}
+.datenschutz .section-title{
+color:var(–text-dark);
+font-size:46px;
+}
+.datenschutz h2{
+font-size:18px;
+font-weight:700;
+text-transform:uppercase;
+color:var(–text-dark);
+letter-spacing:.02em;
+padding-bottom:10px;
+border-bottom:1px solid var(–line);
+margin:40px 0 28px;
+}
+.datenschutz h3{
+font-size:16px;
+font-weight:700;
+color:var(–text-teal);
+margin:22px 0 10px;
+}
+.datenschutz p{
+font-size:13.5px;
+line-height:1.65;
+color:var(–text-dark);
+margin-bottom:12px;
+}
+.datenschutz strong{font-weight:700}
+.datenschutz .two-col-text{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+.datenschutz ul{padding-left:20px;margin-bottom:12px}
+.datenschutz ul li{
+font-size:13.5px;
+line-height:1.65;
+list-style:disc;
+color:var(–text-dark);
+margin-bottom:4px;
+}
+.datenschutz a{color:var(–text-teal);text-decoration:underline}
+.caps-text{text-transform:uppercase;font-size:13px}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width:900px){
+.container{padding:0 24px}
+.section-title{font-size:38px}
+.home-hero h1{font-size:38px}
+.nav{flex-wrap:wrap;gap:14px}
+.nav-item{flex:1 1 45%;font-size:12px}
+.hero{height:260px}
+.icon-cards,.two-col,.info-cards,.ueber-mich-wrap,.nachhaltigkeit,.datenschutz .two-col-text{
+grid-template-columns:1fr;
+}
+.bubbles-wrap{height:auto;display:flex;flex-direction:column;gap:16px}
+.bubble{position:static;margin:0 auto;max-width:90%}
+.bubble::after{display:none}
+.watermark-a,.big-a-watermark,.impressum-a-watermark{display:none}
+.hinweis-box::after{font-size:100px;right:20px}
+}
+</style>
+
+</head>
+<body>
+
+<!-- ===================== HERO ===================== -->
+
+<header class="hero" role="banner" aria-label="Hero-Bereich"></header>
+
+<!-- ===================== NAVIGATION ===================== -->
+
+<nav class="nav-wrap">
+  <div class="nav">
+    <a href="#ueber-mich" class="nav-item">ÜBER MICH</a>
+    <a href="#kompaktseminar" class="nav-item">KOMPAKT-<br>SEMINAR</a>
+    <a href="#honorar" class="nav-item">HONORAR &amp;<br>ABLAUF</a>
+    <a href="#kontakt" class="nav-item">KONTAKT &amp;<br>ANFRAGE</a>
+    <a href="#impressum" class="nav-item">IMPRESSUM &amp;<br>DATENSCHUTZ</a>
+  </div>
+</nav>
+
+<!-- ===================== HOME HERO TEXT ===================== -->
+
+<section class="home-hero">
+  <div class="container">
+    <h1>WAS WIR SAGEN, WIRKT.</h1>
+    <p class="tagline">verständlich · verbindlich · rechtssicher</p>
+
+```
+<h2>KOMPAKTSEMINAR ZUR SENSIBILISIERUNG FÜR SPRACHE, VERHALTEN &amp; RISIKOBEWUSSTSEIN.</h2>
+<p class="sub">Praxisnah für den betrieblichen Alltag – ohne Paragraphen, ohne juristische Fachsprache</p>
+
+<div class="icon-cards">
+  <div class="icon-card">
+    <div class="icon-circle">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M12 14h28v22H24l-6 6v-6h-6z"/>
+        <path d="M24 26h28v22h-6l-6 6v-6H24z" transform="translate(-8,2)"/>
+        <line x1="28" y1="20" x2="28" y2="26"/>
+        <circle cx="28" cy="30" r="1" fill="currentColor"/>
+      </svg>
+    </div>
+    <h3>Kommunikation entscheidet</h3>
+    <p>Klare Worte – weniger Risiko</p>
+  </div>
+
+  <div class="icon-card">
+    <div class="icon-circle">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <circle cx="20" cy="38" r="12"/>
+        <circle cx="44" cy="38" r="12"/>
+        <line x1="32" y1="34" x2="32" y2="28"/>
+        <path d="M14 26 L20 22 L26 26"/>
+        <path d="M38 26 L44 22 L50 26"/>
+      </svg>
+    </div>
+    <h3>Weitblick im Arbeitsalltag</h3>
+    <p>Sensibilisierung bevor Haftungsfragen entstehen</p>
+  </div>
+
+  <div class="icon-card">
+    <div class="icon-circle">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <circle cx="24" cy="24" r="8"/>
+        <circle cx="42" cy="30" r="6"/>
+        <circle cx="30" cy="42" r="7"/>
+        <circle cx="24" cy="24" r="2"/>
+        <circle cx="42" cy="30" r="1.5"/>
+        <circle cx="30" cy="42" r="1.7"/>
+      </svg>
+    </div>
+    <h3>Gewerke sicher verzahnen</h3>
+    <p>Klare Absprachen statt Streit und Nacharbeit</p>
+  </div>
+</div>
+
+<div class="kurz">
+  <h3>KURZ &amp; ÜBERSICHTLICH</h3>
+  <ul>
+    <li>ca. 90 Minuten</li>
+    <li>vor Ort im Betrieb oder in externen Räumlichkeiten</li>
+    <li>für Mitarbeitende &amp; Führungskräfte</li>
+  </ul>
+</div>
+```
+
+  </div>
+</section>
+
+<!-- ===================== ÜBER MICH ===================== -->
+
+<section class="ueber-mich" id="ueber-mich">
+  <div class="container">
+    <h2 class="section-title">ÜBER MICH</h2>
+    <div class="ueber-mich-wrap">
+      <div class="ueber-mich-text">
+        <p class="subtitle-teal" style="font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:500;margin-bottom:6px;">Juristische Klarheit für den Arbeitsalltag</p>
+        <p class="tagline-teal" style="font-size:17px;margin-bottom:28px;">verständlich · verbindlich · rechtssicher</p>
+
+```
+    <h3>ERFAHRUNG &amp; HINTERGRUND</h3>
+    <p>Studium der Rechtswissenschaft an der Eberhard Karls Universität in Tübingen, Rechtsreferendariat am Landgericht Stuttgart.</p>
+    <p>Nach dem zweiten juristischen Staatsexamen war ich mehrere Jahre als Rechtsanwältin tätig. Seit der bewussten Verlagerung meines beruflichen Schwerpunkts in die operative Praxis berate ich zwei mittelständische Unternehmen rechtlich präventiv im Arbeitsalltag.</p>
+    <p>Seit 2012 bin ich in praxisnahe immobilienbezogene Abläufe eingebunden. Mein Schwerpunkt liegt dabei auf der Koordination und Abstimmung zwischen Eigentümern, Handwerkern und Dienstleistern. Insbesondere dort, wo klare Absprachen, Dokumentation und Kommunikation entscheidend sind.</p>
+    <p>Ob zwischen Eigentümern, Handwerkern oder Dienstleistern: Ich kenne die Schnittstellen, an denen Entscheidungen getroffen werden und weiß, wo im Arbeitsalltag typische Haftungsfallen entstehen.</p>
+
+    <h3>WARUM SENSIBILISIERUNG STATT BELEHRUNG?</h3>
+    <p>In meiner Praxis hat sich immer wieder gezeigt: Die meisten Probleme entstehen nicht aus fehlendem Fachwissen, sondern aus der alltäglichen Kommunikation - aus dem, was gesagt, gemeint oder nicht klar genug festgehalten wird.</p>
+    <p>Genau hier setzte ich an. Ich vermittle juristisches Denken praxisnah und verständlich. Mit dem Ziel, Risiken frühzeitig zu erkennen und Entscheidungen im Arbeitsalltag bewusster zu treffen, bevor Konflikte, Mehrkosten und Haftungsfragen entstehen.</p>
+    <p>Aus dieser langjährigen Praxis heraus habe ich das Kompaktseminar entwickelt, das Sie auf den folgenden Seiten kennenlernen zur Sensibilisierung für Sprache, Verhalten und Risikobewusstsein im Arbeitsalltag.</p>
+    <p>Ziel ist eine verlässliche Zusammenarbeit im Arbeitsalltag – durch klare Absprachen, verständliche Kommunikation und ein geschärftes Bewusstsein für Risiken und Verantwortung.</p>
+  </div>
+  <div class="ueber-mich-img"></div>
+</div>
+```
+
+  </div>
+</section>
+
+<!-- ===================== KOMPAKTSEMINAR ===================== -->
+
+<section class="kompakt" id="kompaktseminar">
+  <div class="watermark-a">A<span style="font-size:.7em">+</span></div>
+  <div class="container">
+    <h2 class="section-title on-dark">DAS KOMPAKTSEMINAR</h2>
+    <p class="tagline-teal on-dark" style="font-weight:700;font-size:16px;text-transform:uppercase;letter-spacing:.02em;">SENSIBILISIERUNG FÜR SPRACHE, VERHALTEN UND RISIKOBEWUSSTSEIN.</p>
+
+```
+<p class="kompakt-intro">Im Arbeitsalltag entstehen Risiken oft nicht durch fehlendes Fachwissen, sondern durch unklare Aussagen, spontane Absprachen und eingefahrene Gewohnheiten.</p>
+
+<h3 class="label">KOMMT IHNEN DAS BEKANNT VOR?</h3>
+
+<div class="bubbles-wrap">
+  <div class="bubble b1">„Das ist doch<br>kein Problem."</div>
+  <div class="bubble b2">„So war<br>das nicht<br>gemeint."</div>
+  <div class="bubble b3">„Das haben wir immer<br>so gemacht."</div>
+  <div class="bubble b4">„Das haben wir<br>so besprochen."</div>
+</div>
+
+<p class="bubbles-caption">Genau hier entstehen Missverständnisse und<br>vermeidbare Risiken. Besonders häufig bei spontanen Termin-, Liefer- oder Ausführungszusagen.</p>
+
+<h3 class="label" style="margin-top:40px;">AUS DER BETRIEBLICHEN PRAXIS.</h3>
+
+<div class="practice-box">
+  <h4>Typische Situationen, wie sie täglich vorkommen:</h4>
+  <ul>
+    <li>Ein Abnahmeprotokoll wird vor Ort erstellt – aber nicht unterschrieben oder ganz vergessen. Später entstehen Diskussionen über Leistungen, Mängel oder Verantwortung.</li>
+    <li>Ein Mitarbeiter äußert sich im Kundengespräch unbedacht: „In der Größenordnung oder auch in der Art und Weise machen wir das zum ersten Mal." – Der Auftraggeber verliert Vertrauen – noch bevor die Arbeit begonnen hat.</li>
+  </ul>
+</div>
+
+<div class="two-col">
+  <div class="dark-card">
+    <h4>WORUM ES IM KOMPAKTSEMINAR GEHT</h4>
+    <p style="margin-bottom:12px;">Das Seminar vermittelt ein klares Verständnis dafür,</p>
+    <ul style="margin-bottom:20px;">
+      <li style="padding-left:14px;position:relative;margin-bottom:6px;">• wie Sprache wirkt</li>
+      <li style="padding-left:14px;position:relative;margin-bottom:6px;">• wo Risiken entstehen</li>
+      <li style="padding-left:14px;position:relative;">• wie Kommunikation klarer und verbindlicher gestaltet werden kann.</li>
+    </ul>
+    <h5 style="margin-top:20px;">Die drei Schwerpunkte:</h5>
+    <div class="schwerpunkt">
+      <h5>Risiko-Sensorik:</h5>
+      <p>Kritische Situationen erkennen, bevor sie zum Problem werden.</p>
+    </div>
+    <div class="schwerpunkt">
+      <h5>Verhaltens-Check:</h5>
+      <p>Klar, sicher und verbindlich kommunizieren – intern wie extern.</p>
+    </div>
+    <div class="schwerpunkt">
+      <h5>Klartext-Modus:</h5>
+      <p>Missverständnisse vermeiden durch präzise Aussagen – auch bei Terminen, Zusagen und Absprachen.</p>
+    </div>
+  </div>
+
+  <div class="dark-card">
+    <h4>DER ANSATZ</h4>
+    <h5>Praxisnah. Verständlich. Ohne Belehrung.</h5>
+    <p style="margin-bottom:12px;">Gearbeitet wird mit konkreten Beispielen aus dem Arbeitsalltag, die gemeinsam besprochen und eingeordnet werden.</p>
+    <p style="margin-bottom:12px;">Der Fokus liegt auf Verständnis und direkter Umsetzbarkeit.</p>
+    <p style="margin-bottom:20px;">Ziel ist es, Sicherheit im Umgang mit Aussagen, Absprachen und Verhalten zu gewinnen – im Gespräch, am Telefon und im Schriftverkehr.</p>
+
+    <h5 style="margin-top:24px;">Kurz &amp; übersichtlich</h5>
+    <div class="kurz-dark">
+      <div class="row"><span>Dauer:</span><span>ca. 90 Minuten</span></div>
+      <div class="row"><span>Durchführung:</span><span>im Betrieb oder extern</span></div>
+      <div class="row"><span>Geeignet für:</span><span>Mitarbeitende und Führungskräfte</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="fuer-wen">
+  <h3 class="label">Für wen das Kompaktseminar sinnvoll ist</h3>
+  <p>Für Betriebe, in denen täglich kommuniziert, entschieden und Verantwortung getragen wird.<br>Insbesondere für Handwerks- und technische Betriebe.</p>
+  <p>Branchenübergreifend einsetzbar – für Mitarbeitende und Führungskräfte im betrieblichen Alltag.</p>
+</div>
+```
+
+  </div>
+</section>
+
+<!-- ===================== HONORAR & ABLAUF ===================== -->
+
+<section class="honorar" id="honorar">
+  <div class="big-a-watermark">A<span style="font-size:.7em">+</span></div>
+  <div class="container" style="position:relative;z-index:1;">
+    <h2 class="section-title">HONORAR &amp; ABLAUF</h2>
+    <p class="tagline-teal" style="font-weight:700;font-size:17px;">transparent · überschaubar · planbar</p>
+    <p class="intro">Das Kompaktseminar ist als klare Pauschalleistung konzipiert – ohne versteckte Kosten.</p>
+    <p class="preis">Pauschalhonorar: 950,-€ zzgl. gesetzlicher Umsatzsteuer</p>
+
+```
+<h3 class="big-label">ENTHALTENE LEISTUNGEN:</h3>
+<ul class="honorar-list">
+  <li><strong>Vorgespräch</strong> zur Abstimmung des betrieblichen Rahmens.</li>
+  <li><strong>Maßgeschneiderte Inhalte:</strong>
+    <ul>
+      <li>Besprechung von 3-4 praxisnahen Fällen aus Ihrem Betrieb</li>
+      <li>Fester Grundlagenbaustein zur Wirkung von Sprache, Verhalten und Formulierung im Arbeitsalltag</li>
+    </ul>
+  </li>
+  <li>Vermittlung praxiserprobter und kontinuierlich weiterentwickelter Grundsätze aus der betrieblichen Praxis</li>
+  <li><strong>90-minütiges Komapaktseminar</strong> inkl. Fragerunde</li>
+  <li><strong>Handout</strong> mit zentralen Erkenntnissen und Formulierungsbeispielen für den Arbeitsalltag</li>
+  <li><strong>Teilnehmende:</strong> Basisgruppe bis zu 10 Personen, Erweiterung auf max. 12 Personen möglich (jede weitere Person: 100,-€ zzgl. USt)</li>
+</ul>
+
+<div class="info-cards">
+  <div class="info-card">
+    <h4>Ort &amp; Durchführung</h4>
+    <ul>
+      <li>im Betreib vor Ort</li>
+      <li>oder in externen Räumlichkeiten</li>
+    </ul>
+  </div>
+  <div class="info-card">
+    <h4>Abrechnung &amp; Zahlung</h4>
+    <ul>
+      <li>Abrechnung per Rechnung</li>
+      <li>Zahlungsziel: 14 Tage ohne Abzug nach Rechnungserhalt</li>
+    </ul>
+  </div>
+  <div class="info-card">
+    <h4>Fahrtkosten</h4>
+    <ul>
+      <li>bis 30 km um Kirchheim unter Teck inklusive</li>
+      <li>ab 31 km: 0,50 € pro gefahrene Kilometer</li>
+    </ul>
+  </div>
+</div>
+
+<div class="auf-wunsch">
+  <h3>Auf Wunsch ohne Aufpreis</h3>
+  <ul>
+    <li>Teilnahmebestätigung für die Teilnehmenden</li>
+    <li>Bestätigung für den Betrieb als präventive Maßnahme</li>
+  </ul>
+</div>
+
+<div class="hinweis-box">
+  <h4>WICHTIGER HINWEIS ZUR WISSENSVERMITTLUNG:</h4>
+  <p>Das Kompaktseminar ist ein präventives Bildungs- und Sensibilisierungsformat. Es vermittelt allgemeine juristische Denkweisen und Methoden zur frühzeitigen Erkennung und Vermeidung von Risiken im betrieblichen Alltag.</p>
+  <p>Im Rahmen des Seminars erfolgt keine individuelle Rechtsberatung sowie keine Prüfung konkreter Einzelfälle, Verträge oder laufender Rechtsstreitigkeiten. Das Angebot dient ausschließlich der Prävention zur Sensibilisierung, nicht der rechtlichen Einzelfalllösung.</p>
+  <p>Für die individuelle rechtliche Bewertung konkreter Einzelfälle ist die Beratung durch eine zugelassene Rechtsanwaltskanzlei sinnvoll.</p>
+</div>
+
+<div class="nachhaltigkeit">
+  <div class="left">
+    <h3>Nachhaltigkeit &amp; Vertiefung</h3>
+    <p>Das Kompaktseminar bietet sofortigen Nutzen nach 90 Minuten.</p>
+  </div>
+  <div class="vertiefung-box">
+    <h4>Zur nachhaltigen Sicherung der Inhalte biete ich optional an:</h4>
+    <h5>Auffrischung</h5>
+    <p>Wiederholung zur Festigung oder für neue Mitarbeitende (z.B. nach 6-12 Monaten).</p>
+    <h5>Vertiefung</h5>
+    <p>Folgetermin mit neuen oder vertiefenden Schwerpunkten aus Ihrem Betriebsalltag.</p>
+  </div>
+</div>
+```
+
+  </div>
+</section>
+
+<!-- ===================== KONTAKT ===================== -->
+
+<section class="kontakt" id="kontakt">
+  <div class="container">
+    <h2 class="section-title">KONTAKT</h2>
+    <h3>Haben Sie eine Frage zu meinem Kompaktseminar oder möchten Sie einen Termin für ein kostenloses Vorgespräch vereinbaren?</h3>
+    <p class="intro-p">Schreiben Sie mir gerne eine Nachricht. Ich melde mich in der Regel innerhalb von 24 Stunden. Alternativ erreichen Sie mich auch telefonisch unter <strong>+49 170 2121544</strong></p>
+
+```
+<form onsubmit="event.preventDefault(); alert('Dies ist eine statische Konvertierung – das Formular wird nicht versendet.');">
+  <div class="field">
+    <label for="name">Ihr Name*</label>
+    <input type="text" id="name" required>
+  </div>
+  <div class="field">
+    <label for="tel">Ihre Telefonnummer (optional)*</label>
+    <input type="tel" id="tel">
+  </div>
+  <div class="field">
+    <label for="email">Ihre E-Mail*</label>
+    <input type="email" id="email" required>
+  </div>
+  <div class="field">
+    <label for="msg">Ihre Nachricht*</label>
+    <textarea id="msg" required></textarea>
+  </div>
+  <p class="disclaimer">* Die von Ihnen angegebenen Daten werden nur verwendet, um Ihr Anliegen zu bearbeiten, und allein zu diesem Zweck gespeichert. Weitere Informationen und Widerspruchshinweise finden Sie in meiner Datenschutzerklärung.</p>
+  <button type="submit" class="btn-send">Nachricht jetzt senden!</button>
+</form>
+```
+
+  </div>
+</section>
+
+<!-- ===================== IMPRESSUM ===================== -->
+
+<section class="impressum" id="impressum">
+  <div class="impressum-a-watermark">A<span style="font-size:.7em">+</span></div>
+  <div class="container">
+    <h2 class="section-title">IMPRESSUM</h2>
+
+```
+<p class="big-name"><strong>ANNETTE HAMBURG</strong> | Präventive Seminare zur Sensibilisierung</p>
+<p>Mozartstr. 25</p>
+<p>73230 Kirchheim unter Teck</p>
+
+<h3>Kontakt</h3>
+<p>Telefon: +49 170 2121544</p>
+<p>E-Mail: kontakt@annette-hamburg.de</p>
+
+<h3>Umsatzsteuer-ID</h3>
+<p>Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:</p>
+<p>XXXXXX</p>
+
+<h3>Verbraucherstreitbeilegung/Universalschlichtungsstelle</h3>
+<p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+
+<p style="margin-top:18px;"><strong>Quelle:</strong> eRecht24</p>
+```
+
+  </div>
+</section>
+
+<!-- ===================== DATENSCHUTZERKLÄRUNG ===================== -->
+
+<section class="datenschutz">
+  <div class="container">
+    <h2 class="section-title">DATENSCHUTZERKLÄRUNG</h2>
+
+```
+<h2>1. DATENSCHUTZ AUF EINEN BLICK</h2>
+<div class="two-col-text">
+  <div>
+    <h3>Allgemeine Hinweise</h3>
+    <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgeführten Datenschutzerklärung.</p>
+
+    <h3>Datenerfassung auf dieser Website</h3>
+    <p><strong>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</strong></p>
+    <p>Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Abschnitt „Hinweis zur Verantwortlichen Stelle" in dieser Datenschutzerklärung entnehmen.</p>
+
+    <p><strong>Wie erfassen wir Ihre Daten?</strong></p>
+    <p>Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z. B. um Daten handeln, die Sie in ein Kontaktformular eingeben. Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website durch unsere ITSysteme erfasst. Das sind vor allem technische Daten (z. B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten erfolgt automatisch, sobald Sie diese Website betreten.</p>
+  </div>
+  <div>
+    <p><strong>Wofür nutzen wir Ihre Daten?</strong></p>
+    <p>Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden. Sofern über die Website Verträge geschlossen oder angebahnt werden können, werden die übermittelten Daten auch für Vertragsangebote, Bestellungen oder sonstige Auftragsanfragen verarbeitet.</p>
+
+    <p><strong>Welche Rechte haben Sie bezüglich Ihrer Daten?</strong></p>
+    <p>Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen. Wenn Sie eine Einwilligung zur Datenverarbeitung erteilt haben, können Sie diese Einwilligung jederzeit für die Zukunft widerrufen. Außerdem haben Sie das Recht, unter bestimmten Umständen die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Des Weiteren steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu. Hierzu sowie zu weiteren Fragen zum Thema Datenschutz können Sie sich jederzeit an uns wenden.</p>
+
+    <h3>Analyse-Tools und Tools von Drittanbietern</h3>
+    <p>Beim Besuch dieser Website kann Ihr Surf-Verhalten statistisch ausgewertet werden. Das geschieht vor allem mit sogenannten Analyseprogrammen. Detaillierte Informationen zu diesen Analyseprogrammen finden Sie in der folgenden Datenschutzerklärung.</p>
+  </div>
+</div>
+
+<h2>2. HOSTING</h2>
+<div class="two-col-text">
+  <div>
+    <p>Wir hosten die Inhalte unserer Website bei folgendem Anbieter:</p>
+    <p><strong>STRATO</strong></p>
+    <p>Anbieter ist die Strato AG, Otto-Ostrowski-Straße 7, 10249 Berlin (nachfolgend „Strato"). Wenn Sie unsere Website besuchen, erfasst Strato verschiedene Logfiles inklusive Ihrer IP-Adressen.</p>
+    <p>Weitere Informationen entnehmen Sie der Datenschutzerklärung von Strato: <a href="https://www.strato.de/datenschutz/" target="_blank" rel="noopener">https://www.strato.de/datenschutz/</a>.</p>
+  </div>
+  <div>
+    <p>Die Verwendung von Strato erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse an einer möglichst zuverlässigen Darstellung unserer Website. Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG, soweit die Einwilligung die Speicherung von Cookies oder den Zugriff auf Informationen im Endgerät des Nutzers (z. B. Device-Fingerprinting) im Sinne des TDDDG umfasst. Die Einwilligung ist jederzeit widerrufbar.</p>
+  </div>
+</div>
+
+<h2>3. ALLGEMEINE HINWEISE UND PFLICHTINFORMATIONEN</h2>
+<div class="two-col-text">
+  <div>
+    <h3>Datenschutz</h3>
+    <p>Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung. Wenn Sie diese Website benutzen, werden verschiedene personenbezogene Daten erhoben. Personenbezogene Daten sind Daten, mit denen Sie persönlich identifiziert werden können. Die vorliegende Datenschutzerklärung erläutert, welche Daten wir erheben und wofür wir sie nutzen. Sie erläutert auch, wie und zu welchem Zweck das geschieht.</p>
+    <p>Wir weisen darauf hin, dass die Datenübertragung im Internet (z. B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.</p>
+
+    <h3>Hinweis zur verantwortlichen Stelle</h3>
+    <p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
+    <p><strong>ANNETTE HAMBURG</strong><br>Mozartstr. 25<br>73230 Kirchheim unter Teck</p>
+    <p>Telefon: +491702121544<br>E-Mail: kontakt@annette-hamburg.de</p>
+    <p>Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z. B. Namen, E-MailAdressen o. Ä.) entscheidet.</p>
+
+    <h3>Speicherdauer</h3>
+    <p>Soweit innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt. Wenn Sie ein berechtigtes Löschersuchen geltend machen oder eine Einwilligung zur Datenverarbeitung widerrufen, werden Ihre Daten gelöscht, sofern wir keine anderen rechtlich zulässigen Gründe für die Speicherung Ihrer personenbezogenen Daten haben (z. B. steuer- oder handelsrechtliche Aufbewahrungsfristen); im letztgenannten Fall erfolgt die Löschung nach Fortfall dieser Gründe.</p>
+
+    <h3>Allgemeine Hinweise zu den Rechtsgrundlagen der Datenverarbeitung auf dieser Website</h3>
+    <p>Sofern Sie in die Datenverarbeitung eingewilligt haben, verarbeiten wir Ihre personenbezogenen Daten auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO bzw. Art. 9 Abs. 2 lit. a DSGVO, sofern besondere Datenkategorien nach Art. 9 Abs. 1 DSGVO verarbeitet werden. Im Falle einer ausdrücklichen Einwilligung in die Übertragung personenbezogener Daten in Drittstaaten erfolgt die Datenverarbeitung außerdem auf Grundlage von Art. 49 Abs. 1 lit. a DSGVO. Sofern Sie in die Speicherung von Cookies oder in den Zugriff auf Informationen in Ihr Endgerät (z. B. via Device-Fingerprinting) eingewilligt haben, erfolgt die Datenverarbeitung zusätzlich auf Grundlage von § 25 Abs. 1 TDDDG. Die Einwilligung ist jederzeit widerrufbar. Sind Ihre Daten zur Vertragserfüllung oder zur Durchführung vorvertraglicher Maßnahmen erforderlich, verarbeiten wir Ihre Daten auf Grundlage des Art. 6 Abs. 1 lit. b DSGVO. Des Weiteren verarbeiten wir Ihre Daten, sofern diese zur Erfüllung einer rechtlichen Verpflichtung erforderlich sind auf Grundlage von Art. 6 Abs. 1 lit. c DSGVO.</p>
+    <p>Die Datenverarbeitung kann ferner auf Grundlage unseres berechtigten Interesses nach Art. 6 Abs. 1 lit. f DSGVO erfolgen. Über die jeweils im Einzelfall einschlägigen Rechtsgrundlagen wird in den folgenden Absätzen dieser Datenschutzerklärung informiert.</p>
+
+    <h3>Empfänger von personenbezogenen Daten</h3>
+    <p>Im Rahmen unserer Geschäftstätigkeit arbeiten wir mit verschiedenen externen Stellen zusammen. Dabei ist teilweise auch eine Übermittlung von personenbezogenen Daten an diese externen Stellen erforderlich. Wir geben personenbezogene Daten nur dann an externe Stellen weiter, wenn dies im Rahmen einer Vertragserfüllung erforderlich ist, wenn wir gesetzlich hierzu verpflichtet sind (z. B. Weitergabe von Daten an Steuerbehörden), wenn wir ein berechtigtes Interesse nach Art. 6 Abs. 1 lit. f DSGVO an der Weitergabe haben oder wenn eine sonstige Rechtsgrundlage die Datenweitergabe erlaubt. Beim Einsatz von Auftragsverarbeitern geben wir personenbezogene Daten unserer Kunden nur auf Grundlage eines gültigen Vertrags über Auftragsverarbeitung weiter. Im Falle einer gemeinsamen Verarbeitung wird ein Vertrag über gemeinsame Verarbeitung geschlossen.</p>
+
+    <h3>Widerruf Ihrer Einwilligung zur Datenverarbeitung</h3>
+    <p>Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen Einwilligung möglich. Sie können eine bereits erteilte Einwilligung jederzeit widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unberührt.</p>
+
+    <h3>Widerspruchsrecht gegen die Datenerhebung in besonderen Fällen sowie gegen Direktwerbung (Art. 21 DSGVO)</h3>
+    <p class="caps-text">WENN DIE DATENVERARBEITUNG AUF GRUNDLAGE VON ART. 6 ABS. 1 LIT. E ODER F DSGVO ERFOLGT, HABEN SIE JEDERZEIT DAS RECHT, AUS GRÜNDEN, DIE SICH AUS IHRER BESONDEREN SITUATION ERGEBEN, GEGEN DIE VERARBEITUNG IHRER PERSONENBEZOGENEN DATEN WIDERSPRUCH EINZULEGEN; DIES GILT AUCH FÜR EIN AUF DIESE BESTIMMUNGEN GESTÜTZTES PROFILING. DIE JEWEILIGE RECHTSGRUNDLAGE, AUF DENEN EINE VERARBEITUNG BERUHT, ENTNEHMEN SIE DIESER DATENSCHUTZERKLÄRUNG.</p>
+  </div>
+  <div>
+    <p class="caps-text">WENN SIE WIDERSPRUCH EINLEGEN, WERDEN WIR IHRE BETROFFENEN PERSONENBEZOGENEN DATEN NICHT MEHR VERARBEITEN, ES SEI DENN, WIR KÖNNEN ZWINGENDE SCHUTZWÜRDIGE GRÜNDE FÜR DIE VERARBEITUNG NACHWEISEN, DIE IHRE INTERESSEN, RECHTE UND FREIHEITEN ÜBERWIEGEN ODER DIE VERARBEITUNG DIENT DER GELTENDMACHUNG, AUSÜBUNG ODER VERTEIDIGUNG VON RECHTSANSPRÜCHEN (WIDERSPRUCH NACH ART. 21 ABS. 1 DSGVO). WERDEN IHRE PERSONENBEZOGENEN DATEN VERARBEITET, UM DIREKTWERBUNG ZU BETREIBEN, SO HABEN SIE DAS RECHT, JEDERZEIT WIDERSPRUCH GEGEN DIE VERARBEITUNG SIE BETREFFENDER PERSONENBEZOGENER DATEN ZUM ZWECKE DERARTIGER WERBUNG EINZULEGEN; DIES GILT AUCH FÜR DAS PROFILING, SOWEIT ES MIT SOLCHER DIREKTWERBUNG IN VERBINDUNG STEHT. WENN SIE WIDERSPRECHEN, WERDEN IHRE PERSONENBEZOGENEN DATEN ANSCHLIESSEND NICHT MEHR ZUM ZWECKE DER DIREKTWERBUNG VERWENDET (WIDERSPRUCH NACH ART. 21 ABS. 2 DSGVO).</p>
+
+    <h3>Beschwerderecht bei der zuständigen Aufsichtsbehörde</h3>
+    <p>Im Falle von Verstößen gegen die DSGVO steht den Betroffenen ein Beschwerderecht bei einer Aufsichtsbehörde, insbesondere in dem Mitgliedstaat ihres gewöhnlichen Aufenthalts, ihres Arbeitsplatzes oder des Orts des mutmaßlichen Verstoßes zu. Das Beschwerderecht besteht unbeschadet anderweitiger verwaltungsrechtlicher oder gerichtlicher Rechtsbehelfe.</p>
+
+    <h3>Recht auf Datenübertragbarkeit</h3>
+    <p>Sie haben das Recht, Daten, die wir auf Grundlage Ihrer Einwilligung oder in Erfüllung eines Vertrags automatisiert verarbeiten, an sich oder an einen Dritten in einem gängigen, maschinenlesbaren Format aushändigen zu lassen. Sofern Sie die direkte Übertragung der Daten an einen anderen Verantwortlichen verlangen, erfolgt dies nur, soweit es technisch machbar ist.</p>
+
+    <h3>Auskunft, Berichtigung und Löschung</h3>
+    <p>Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung und ggf. ein Recht auf Berichtigung oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit an uns wenden.</p>
+
+    <h3>Recht auf Einschränkung der Verarbeitung</h3>
+    <p>Sie haben das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Hierzu können Sie sich jederzeit an uns wenden. Das Recht auf Einschränkung der Verarbeitung besteht in folgenden Fällen:</p>
+    <ul>
+      <li>Wenn Sie die Richtigkeit Ihrer bei uns gespeicherten personenbezogenen Daten bestreiten, benötigen wir in der Regel Zeit, um dies zu überprüfen. Für die Dauer der Prüfung haben Sie das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.</li>
+      <li>Wenn die Verarbeitung Ihrer personenbezogenen Daten unrechtmäßig geschah/geschieht, können Sie statt der Löschung die Einschränkung der Datenverarbeitung verlangen.</li>
+      <li>Wenn wir Ihre personenbezogenen Daten nicht mehr benötigen, Sie sie jedoch zur Ausübung, Verteidigung oder Geltendmachung von Rechtsansprüchen benötigen, haben Sie das Recht, statt der Löschung die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.</li>
+      <li>Wenn Sie einen Widerspruch nach Art. 21 Abs. 1 DSGVO eingelegt haben, muss eine Abwägung zwischen Ihren und unseren Interessen vorgenommen werden. Solange noch nicht feststeht, wessen Interessen überwiegen, haben Sie das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.</li>
+    </ul>
+    <p>Wenn Sie die Verarbeitung Ihrer personenbezogenen Daten eingeschränkt haben, dürfen diese Daten – von ihrer Speicherung abgesehen – nur mit Ihrer Einwilligung oder zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen oder zum Schutz der Rechte einer anderen natürlichen oder juristischen Person oder aus Gründen eines wichtigen öffentlichen Interesses der Europäischen Union oder eines Mitgliedstaats verarbeitet werden.</p>
+
+    <h3>SSL- bzw. TLS-Verschlüsselung</h3>
+    <p>Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte, wie zum Beispiel Bestellungen oder Anfragen, die Sie an uns als Seitenbetreiber senden, eine SSL- bzw. TLSVerschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http://" auf „https://" wechselt und an dem Schloss-Symbol in Ihrer Browserzeile. Wenn die SSL- bzw. TLS-Verschlüsselung aktiviert ist, können die Daten, die Sie an uns übermitteln, nicht von Dritten mitgelesen werden.</p>
+
+    <h3>Widerspruch gegen Werbe-E-Mails</h3>
+    <p>Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-E-Mails, vor.</p>
+  </div>
+</div>
+
+<h2>4. DATENERFASSUNG AUF DIESER WEBSITE</h2>
+<div class="two-col-text">
+  <div>
+    <h3>Cookies</h3>
+    <p>Unsere Internetseiten verwenden so genannte „Cookies". Cookies sind kleine Datenpakete und richten auf Ihrem Endgerät keinen Schaden an. Sie werden entweder vorübergehend für die Dauer einer Sitzung (Session-Cookies) oder dauerhaft (permanente Cookies) auf Ihrem Endgerät gespeichert. Session-Cookies werden nach Ende Ihres Besuchs automatisch gelöscht. Permanente Cookies bleiben auf Ihrem Endgerät gespeichert, bis Sie diese selbst löschen oder eine automatische Löschung durch Ihren Webbrowser erfolgt.</p>
+    <p>Cookies können von uns (First-Party-Cookies) oder von Drittunternehmen stammen (sog. Third-Party-Cookies). Third-Party-Cookies ermöglichen die Einbindung bestimmter Dienstleistungen von Drittunternehmen innerhalb von Webseiten (z. B. Cookies zur Abwicklung von Zahlungsdienstleistungen). Cookies haben verschiedene Funktionen. Zahlreiche Cookies sind technisch notwendig, da bestimmte Webseitenfunktionen ohne diese nicht funktionieren würden (z. B. die Warenkorbfunktion oder die Anzeige von Videos). Andere Cookies können zur Auswertung des Nutzerverhaltens oder zu Werbezwecken verwendet werden.</p>
+    <p>Cookies, die zur Durchführung des elektronischen Kommunikationsvorgangs, zur Bereitstellung bestimmter, von Ihnen erwünschter Funktionen (z. B. für die Warenkorbfunktion) oder zur Optimierung der Website (z. B. Cookies zur Messung des Webpublikums) erforderlich sind (notwendige Cookies), werden auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO gespeichert, sofern keine andere Rechtsgrundlage angegeben wird. Der Websitebetreiber hat ein berechtigtes Interesse an der Speicherung von notwendigen Cookies zur technisch fehlerfreien und optimierten Bereitstellung seiner Dienste. Sofern eine Einwilligung zur Speicherung von Cookies und vergleichbaren Wiedererkennungstechnologien abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage dieser Einwilligung (Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG); die Einwilligung ist jederzeit widerrufbar.</p>
+    <p>Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden und Cookies nur im Einzelfall erlauben, die Annahme von Cookies für bestimmte Fälle oder generell ausschließen sowie das automatische Löschen der Cookies beim Schließen des Browsers aktivieren. Bei der Deaktivierung von Cookies kann die Funktionalität dieser Website eingeschränkt sein.</p>
+    <p>Welche Cookies und Dienste auf dieser Website eingesetzt werden, können Sie dieser Datenschutzerklärung entnehmen.</p>
+
+    <h3>Server-Log-Dateien</h3>
+    <p>Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt. Dies sind:</p>
+    <ul>
+      <li>Browsertyp und Browserversion</li>
+      <li>verwendetes Betriebssystem</li>
+      <li>Referrer URL</li>
+      <li>Hostname des zugreifenden Rechners</li>
+      <li>Uhrzeit der Serveranfrage</li>
+      <li>IP-Adresse</li>
+    </ul>
+    <p>Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen. Die Erfassung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Der Websitebetreiber hat ein berechtigtes Interesse an der technisch fehlerfreien Darstellung und der Optimierung seiner Website – hierzu müssen die Server-Log-Files erfasst werden.</p>
+  </div>
+  <div>
+    <h3>Kontaktformular</h3>
+    <p>Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter. Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO) oder auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sofern diese abgefragt wurde; die Einwilligung ist jederzeit widerrufbar.</p>
+    <p>Die von Ihnen im Kontaktformular eingegebenen Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt (z. B. nach abgeschlossener Bearbeitung Ihrer Anfrage). Zwingende gesetzliche Bestimmungen – insbesondere Aufbewahrungsfristen – bleiben unberührt.</p>
+
+    <h3>Anfrage per E-Mail, Telefon oder Telefax</h3>
+    <p>Wenn Sie uns per E-Mail, Telefon oder Telefax kontaktieren, wird Ihre Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten (Name, Anfrage) zum Zwecke der Bearbeitung Ihres Anliegens bei uns gespeichert und verarbeitet. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter. Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO) oder auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sofern diese abgefragt wurde; die Einwilligung ist jederzeit widerrufbar.</p>
+    <p>Die von Ihnen an uns per Kontaktanfragen übersandten Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt (z. B. nach abgeschlossener Bearbeitung Ihres Anliegens). Zwingende gesetzliche Bestimmungen – insbesondere gesetzliche Aufbewahrungsfristen – bleiben unberührt.</p>
+  </div>
+</div>
+
+<h2>5. PLUGINS UND TOOLS</h2>
+<div class="two-col-text">
+  <div>
+    <h3>Google Fonts (lokales Hosting)</h3>
+    <p>Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten so genannte Google Fonts, die von Google bereitgestellt werden. Die Google Fonts sind lokal installiert. Eine Verbindung zu Servern von Google findet dabei nicht statt.</p>
+  </div>
+  <div>
+    <p>Weitere Informationen zu Google Fonts finden Sie unter <a href="https://developers.google.com/fonts/faq" target="_blank" rel="noopener">https://developers.google.com/fonts/faq</a></p>
+    <p>und in der Datenschutzerklärung von Google: <a href="https://policies.google.com/privacy?hl=de" target="_blank" rel="noopener">https://policies.google.com/privacy?hl=de</a>.</p>
+    <p style="margin-top:20px;">Quelle: <a href="https://www.e-recht24.de" target="_blank" rel="noopener">https://www.e-recht24.de</a></p>
+  </div>
+</div>
+```
+
+  </div>
+</section>
+
+</body>
+</html>
